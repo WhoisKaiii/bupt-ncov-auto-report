@@ -54,7 +54,7 @@ def ncov_report(username, password, name, is_useold):
             post_data = json.loads(copy.deepcopy(INFO).replace("\n", "").replace(" ", ""))
     report_res = session.post(
         REPORT_API,
-        data=post_data,
+        # data=post_data,
         headers={**COMMON_HEADERS,**COMMON_POST_HEADERS,'Referer': HEADERS.REFERER_POST_API,},
     )
     if report_res.status_code != 200:
